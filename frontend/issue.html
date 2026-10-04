@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LibraVerse | Issue Book</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                📚
+            </div>
+
+            <div>
+                <h2>
+                    Libra<span>Verse</span>
+                </h2>
+
+                <small>
+                    Library System
+                </small>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="/dashboard" class="nav-item">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/books" class="nav-item">
+                📚
+                <span>Books</span>
+            </a>
+
+            <a href="/members" class="nav-item">
+                👥
+                <span>Members</span>
+            </a>
+
+            <a href="/issue" class="nav-item active">
+                📤
+                <span>Issue Book</span>
+            </a>
+
+            <a href="/return" class="nav-item">
+                📥
+                <span>Return Book</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <div class="page-header">
+
+            <h1>
+                📤 Issue Book
+            </h1>
+
+            <p>
+                Issue a book to a registered library member.
+            </p>
+
+        </div>
+
+
+        <!-- ISSUE FORM -->
+
+        <section class="book-form-card">
+
+            <div class="section-heading">
+
+                <h2>
+                    📖 Issue a Book
+                </h2>
+
+                <p>
+                    Select a book, member and issue date.
+                </p>
+
+            </div>
+
+
+            <form id="issueForm">
+
+                <div class="book-form-grid">
+
+                    <!-- BOOK -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Book
+                        </label>
+
+                        <select
+                            id="issueBook"
+                            required
+                        >
+
+                            <option value="">
+                                Loading books...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- MEMBER -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Member
+                        </label>
+
+                        <select
+                            id="issueMember"
+                            required
+                        >
+
+                            <option value="">
+                                Loading members...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- ISSUE DATE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Issue Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="issueDate"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="add-book-btn"
+                >
+                    📤 Issue Book
+                </button>
+
+            </form>
+
+
+            <p
+                id="issueMessage"
+                class="message"
+            ></p>
+
+        </section>
+
+
+        <!-- CURRENTLY ISSUED BOOKS -->
+
+        <section class="collection-section">
+
+            <div class="collection-header">
+
+                <h2>
+                    📋 Currently Issued Books
+                </h2>
+
+                <p id="issuedCount">
+                    Loading...
+                </p>
+
+            </div>
+
+
+            <div
+                id="issuedContainer"
+                class="books-grid"
+            >
+
+                <p>
+                    Loading issued books...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/issue.js"></script>
+
+</body>
+
+</html>

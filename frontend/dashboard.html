@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LibraVerse - Dashboard</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-layout">
+
+        <!-- ==========================================
+             SIDEBAR
+        ========================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <span>📚</span>
+                <h2>LibraVerse</h2>
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="/dashboard" class="nav-item active">
+                    🏠
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="/books" class="nav-item">
+                    📚
+                    <span>Books</span>
+                </a>
+
+                <a href="/members" class="nav-item">
+                    👥
+                    <span>Members</span>
+                </a>
+
+                <a href="/issue" class="nav-item">
+                    📤
+                    <span>Issue Book</span>
+                </a>
+
+                <a href="/return" class="nav-item">
+                    📥
+                    <span>Return Book</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <button
+                    class="logout-btn"
+                    id="logoutBtn">
+
+                    🚪
+                    <span>Logout</span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT
+        ========================================== -->
+
+        <main class="dashboard-main">
+
+
+            <!-- ======================================
+                 HEADER
+            ====================================== -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        👋 Welcome to LibraVerse
+                    </h1>
+
+                    <p>
+                        Your library at a glance
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ======================================
+                 STATISTICS
+            ====================================== -->
+
+            <section class="stats-grid">
+
+
+                <!-- TOTAL BOOKS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📚
+                    </div>
+
+                    <h3 id="totalBooks">
+                        0
+                    </h3>
+
+                    <p>
+                        Total Books
+                    </p>
+
+                </div>
+
+
+
+                <!-- AVAILABLE BOOKS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📖
+                    </div>
+
+                    <h3 id="availableBooks">
+                        0
+                    </h3>
+
+                    <p>
+                        Available Books
+                    </p>
+
+                </div>
+
+
+
+                <!-- ISSUED BOOKS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📤
+                    </div>
+
+                    <h3 id="issuedBooks">
+                        0
+                    </h3>
+
+                    <p>
+                        Issued Books
+                    </p>
+
+                </div>
+
+
+
+                <!-- MEMBERS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <h3 id="totalMembers">
+                        0
+                    </h3>
+
+                    <p>
+                        Total Members
+                    </p>
+
+                </div>
+
+
+
+                <!-- RETURNED -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📥
+                    </div>
+
+                    <h3 id="returnedBooks">
+                        0
+                    </h3>
+
+                    <p>
+                        Returned Books
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ======================================
+                 CHARTS
+            ====================================== -->
+
+            <section class="dashboard-charts">
+
+
+                <!-- BOOK STATUS -->
+
+                <div class="chart-card">
+
+                    <div class="chart-header">
+
+                        <div>
+
+                            <h2>
+                                📚 Book Status
+                            </h2>
+
+                            <p>
+                                Available vs issued books
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-wrapper">
+
+                        <canvas
+                            id="bookStatusChart">
+                        </canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="chart-card">
+
+                    <div class="chart-header">
+
+                        <div>
+
+                            <h2>
+                                🏷️ Book Categories
+                            </h2>
+
+                            <p>
+                                Books grouped by category
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-wrapper">
+
+                        <canvas
+                            id="categoryChart">
+                        </canvas>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ======================================
+                 QUICK ACTIONS
+            ====================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            ⚡ Quick Actions
+                        </h2>
+
+                        <p>
+                            Manage your library quickly
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="quick-actions">
+
+
+                    <a
+                        href="/books"
+                        class="quick-action">
+
+                        <span>
+                            📚
+                        </span>
+
+                        <h3>
+                            Manage Books
+                        </h3>
+
+                        <p>
+                            Add, search and manage books
+                        </p>
+
+                    </a>
+
+
+
+                    <a
+                        href="/members"
+                        class="quick-action">
+
+                        <span>
+                            👥
+                        </span>
+
+                        <h3>
+                            Manage Members
+                        </h3>
+
+                        <p>
+                            Add and manage library members
+                        </p>
+
+                    </a>
+
+
+
+                    <a
+                        href="/issue"
+                        class="quick-action">
+
+                        <span>
+                            📤
+                        </span>
+
+                        <h3>
+                            Issue a Book
+                        </h3>
+
+                        <p>
+                            Issue books to members
+                        </p>
+
+                    </a>
+
+
+
+                    <a
+                        href="/return"
+                        class="quick-action">
+
+                        <span>
+                            📥
+                        </span>
+
+                        <h3>
+                            Return a Book
+                        </h3>
+
+                        <p>
+                            Process returned books
+                        </p>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ======================================
+                 RECENT ACTIVITY
+            ====================================== -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            🕒 Recent Activity
+                        </h2>
+
+                        <p>
+                            Latest library transactions
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="activity-container"
+                    id="activityContainer">
+
+                    <div class="activity-loading">
+
+                        Loading recent activity...
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ======================================
+                 WELCOME CARD
+            ====================================== -->
+
+            <section class="dashboard-welcome">
+
+                <div class="welcome-content">
+
+                    <h2>
+                        ✨ Welcome to LibraVerse
+                    </h2>
+
+                    <p>
+                        Manage books, members, issues and
+                        returns from one beautiful dashboard.
+                    </p>
+
+                </div>
+
+
+                <div class="welcome-icon">
+
+                    📚
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="/dashboard.js"></script>
+
+
+</body>
+
+</html>

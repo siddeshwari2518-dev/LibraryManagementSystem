@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LibraVerse | Books</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body class="dashboard-page">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                📚
+            </div>
+
+            <div>
+                <h2>Libra<span>Verse</span></h2>
+                <small>Library System</small>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="/dashboard" class="nav-item">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/books" class="nav-item active">
+                📚
+                <span>Books</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                👥
+                <span>Members</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                📤
+                <span>Issue Book</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                📥
+                <span>Return Book</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="dashboard-main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    📚 Book Management
+                </h1>
+
+                <p>
+                    Manage your library collection.
+                </p>
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div class="avatar">
+                    👨‍🎓
+                </div>
+
+                <div>
+
+                    <strong id="userName">
+                        Student
+                    </strong>
+
+                    <small id="userEmail">
+                        student@example.com
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ADD BOOK -->
+
+        <section class="book-form-card">
+
+            <div class="section-heading">
+
+                <h2>
+                    ➕ Add New Book
+                </h2>
+
+                <p>
+                    Add a new book to your library collection.
+                </p>
+
+            </div>
+
+
+            <form id="bookForm">
+
+                <div class="book-form-grid">
+
+                    <div class="input-group">
+
+                        <label>
+                            Book Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bookTitle"
+                            placeholder="Enter book title"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Author
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bookAuthor"
+                            placeholder="Enter author name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            ISBN
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bookIsbn"
+                            placeholder="Enter ISBN"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Category
+                        </label>
+
+                        <select id="bookCategory">
+
+                            <option value="Fiction">
+                                Fiction
+                            </option>
+
+                            <option value="Science">
+                                Science
+                            </option>
+
+                            <option value="Technology">
+                                Technology
+                            </option>
+
+                            <option value="History">
+                                History
+                            </option>
+
+                            <option value="Education">
+                                Education
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn add-book-btn"
+                >
+                    ➕ Add Book
+                </button>
+
+            </form>
+
+
+            <div id="bookMessage"></div>
+
+        </section>
+
+
+
+        <!-- SEARCH -->
+
+        <section class="search-card">
+
+            <div>
+
+                <h2>
+                    🔍 Search Books
+                </h2>
+
+                <p>
+                    Search by title, author or ISBN.
+                </p>
+
+            </div>
+
+
+            <input
+                type="text"
+                id="searchBook"
+                placeholder="Search books..."
+            >
+
+        </section>
+
+
+
+        <!-- BOOK LIST -->
+
+        <section class="content-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    📖 Library Collection
+                </h2>
+
+                <p id="bookCount">
+                    Loading books...
+                </p>
+
+            </div>
+
+
+            <div
+                id="booksContainer"
+                class="books-grid"
+            >
+
+                <!-- Books will appear here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/books.js"></script>
+
+</body>
+
+</html>

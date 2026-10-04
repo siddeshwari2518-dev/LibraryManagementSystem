@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraVerse - Return Book</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            📚 LibraVerse
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/dashboard" class="nav-item">
+                🏠 Dashboard
+            </a>
+
+            <a href="/books" class="nav-item">
+                📚 Books
+            </a>
+
+            <a href="/members" class="nav-item">
+                👥 Members
+            </a>
+
+            <a href="/issue" class="nav-item">
+                📤 Issue Book
+            </a>
+
+            <a href="/return" class="nav-item active">
+                📥 Return Book
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button class="logout-btn" id="logoutBtn">
+                🚪 Logout
+            </button>
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <div class="page-header">
+
+            <div>
+                <h1>📥 Return Book</h1>
+                <p>Manage books that are currently issued.</p>
+            </div>
+
+        </div>
+
+
+        <div class="stats-card">
+            <h2>📖 Currently Issued Books</h2>
+            <p id="returnCount">0 books currently issued</p>
+        </div>
+
+
+        <div id="returnContainer" class="books-grid">
+            <!-- Issued books will appear here -->
+        </div>
+
+    </main>
+
+</div>
+
+<script src="/return.js"></script>
+
+</body>
+</html>

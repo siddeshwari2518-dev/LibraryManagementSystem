@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LibraVerse | Members</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- ============================= -->
+    <!-- SIDEBAR -->
+    <!-- ============================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                📚
+            </div>
+
+            <div>
+                <h2>
+                    Libra<span>Verse</span>
+                </h2>
+
+                <small>
+                    Library System
+                </small>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="/dashboard">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/books">
+                📚
+                <span>Books</span>
+            </a>
+
+            <a
+                href="/members"
+                class="active"
+            >
+                👥
+                <span>Members</span>
+            </a>
+
+            <a href="#">
+                📤
+                <span>Issue Book</span>
+            </a>
+
+            <a href="#">
+                📥
+                <span>Return Book</span>
+            </a>
+
+        </nav>
+
+
+        <button
+            id="logoutBtn"
+            class="logout-btn"
+        >
+            🚪 Logout
+        </button>
+
+    </aside>
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <main class="main-content">
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>
+                    👥 Member Management
+                </h1>
+
+                <p>
+                    Manage your library members.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- ADD MEMBER -->
+        <!-- ============================= -->
+
+        <section class="book-form-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>
+                        ➕ Add New Member
+                    </h2>
+
+                    <p>
+                        Register a new library member.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="memberForm">
+
+                <div class="book-form-grid">
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Member Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="memberName"
+                            placeholder="Enter member name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="memberEmail"
+                            placeholder="Enter email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="memberPhone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="add-book-btn"
+                >
+                    ➕ Add Member
+                </button>
+
+            </form>
+
+
+            <p
+                id="memberMessage"
+                class="message"
+            ></p>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- SEARCH -->
+        <!-- ============================= -->
+
+        <section class="search-card">
+
+            <div class="search-title">
+
+                <h2>
+                    🔍 Search Members
+                </h2>
+
+                <p>
+                    Search by name, email or phone.
+                </p>
+
+            </div>
+
+
+            <input
+                type="text"
+                id="searchMember"
+                placeholder="Search members..."
+            >
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- MEMBER COLLECTION -->
+        <!-- ============================= -->
+
+        <section class="collection-section">
+
+            <div class="collection-header">
+
+                <div>
+
+                    <h2>
+                        👥 Library Members
+                    </h2>
+
+                    <p id="memberCount">
+                        Loading members...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="membersContainer"
+                class="books-grid"
+            >
+
+                <p>
+                    Loading members...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/members.js"></script>
+
+</body>
+
+</html>

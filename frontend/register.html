@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LibraVerse | Register</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body class="auth-page">
+
+    <div class="auth-container">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="auth-brand">
+
+            <div class="brand-icon">
+                📚
+            </div>
+
+            <h1>
+                Libra<span>Verse</span>
+            </h1>
+
+            <p>
+                Create your account and enter the world of books.
+            </p>
+
+            <div class="floating-books">
+                📕 📗 📘 📙
+            </div>
+
+        </div>
+
+
+        <!-- REGISTER CARD -->
+
+        <div class="auth-card">
+
+            <div class="auth-header">
+
+                <h2>
+                    Create Account ✨
+                </h2>
+
+                <p>
+                    Join the LibraVerse library.
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="student@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Minimum 6 characters"
+                        minlength="6"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    ✨ Create Account
+                </button>
+
+
+            </form>
+
+
+            <!-- MESSAGE -->
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+
+            <!-- FOOTER -->
+
+            <div class="auth-footer">
+
+                <p>
+
+                    Already have an account?
+
+                    <a href="/">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/auth.js"></script>
+
+</body>
+
+</html>
